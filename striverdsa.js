@@ -1,11 +1,183 @@
-// RECURSION -------------------------
+// RECURSION ------------------------- Apr/20/25
+// Q1 sum of n number in rec Funvtional recursion 
+/*
+let n = 5;
+let res = sumRec(n);
+console.log(res)
+
+function sumRec(n){
+    if(n == 1){
+        return 1;
+    }
+    return n + sumRec(n-1);
+}
+    TC -> O(n)
+    SC -> O(n)
+*/
+
+// Q2 Factorial of n number  ( multiplication )
+/*
+let n = 5;
+let res = factRec(n);
+console.log(`Factorial of ${n} is ->`, res);
+
+function factRec(n) {
+    if(n == 1){
+        return 1;
+    }
+    return n * factRec(n-1);
+}
+TC -> O(n)
+SC -> O(n)
+*/
+
+// Q3 Reverse an array using recursion 
+/*
+let arr = [1,2,3,4,5];
+let n = arr.length;
+
+revArrayRec(arr,0,n-1);
+printArray(arr);
+
+function printArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        process.stdout.write(arr[i] + " ");        
+    }
+    console.log();
+}
+
+function revArrayRec(arr,start,end) {
+   
+    if(start < end){
+        const temp = arr[end];
+        arr[end] = arr[start];
+        arr[start] = temp;
+        revArrayRec(arr,start +1,end -1);
+    }
+}
+
+*/
+// Q4 Check string is palindrome 
+/*
+let str = "MADSAM";
+let res = isPalindrome(0,str);
+console.log(res)
+
+
+function isPalindrome(i,str) {
+    let n = str.length ;
+    if(i >= n/2){
+        return true;
+    }
+    if(str[i] != str[n-i-1]) return false;
+
+    return isPalindrome(i+1,str)
+}
+*/
+
+
+// RECURSION ------------------------- Apr/19/25
 // when a function call it self untill a specified condition is met 
+// Q1 
+// let n = 5;
+// let res = fact(n);
+// console.log(res)
+
+// function fact(n){
+//     if(n == 1) return 1;
+//     return n *  fact(n-1);
+// }
+
+// Q2 Print name n times using recursion 
+/*
+let n = 5;
+let res = printName(1,n);
+function printName(i,n){
+    if(i > n){
+        return;
+    }
+    console.log("SP")
+    printName(i+1,n);
+}
+TC :- o(n) //calling n functions
+SC :- o(n) //stack space
+*/
+
+// Q3  Print 1 to N using recursion 
+/*
+let n = 50;
+let res = print1ToN(1,n);
+
+function print1ToN(i,n){
+    if(i > n ){
+        return;
+    }
+    console.log(i);
+    print1ToN(i+1,n);
+}
+    TC -> O(n)
+    SC -> O(n)
+*/
+
+// Q4  Print N to 1 using recursion backtracking
+/*
+let n = 50;
+let res = print1ToN(1,n);
+
+function print1ToN(i,n){
+    if(i > n ){
+        return;
+    }
+    print1ToN(i+1,n);
+    console.log(i);
+}
+TC :- o(n) //calling n functions
+SC :- o(n) //stack space
+
+
+// v2 
+let n = 5;
+let res = print1ToN(n,n);
+
+function print1ToN(i,n){
+    if(i < 1 ){
+        return;
+    }
+    console.log(i);
+    print1ToN(i-1,n);
+}
+*/
+// Q5  back tracking you can not increment i
+/* 
+let n = 5;
+let res = print1ToN(n,n);
+
+function print1ToN(i,n){
+    if(i < 1 ){
+        return;
+    }
+    print1ToN(i-1,n);
+    console.log(i);
+}
+*/
+
+// Q6 print from n to 1 nut dont use i -1
+/*
+let n = 5;
+let res = print1ToN(1,n);
+
+function print1ToN(i,n){
+    if(i  > n ){
+        return;
+    }
+    print1ToN(i+1,n);
+    console.log(i);
+}
+Rec 2 v completed 
+*/
+
 
 // ----------------------------------------
-
-
-
-
 
 
 // GCD || HCF 
