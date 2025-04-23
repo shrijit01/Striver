@@ -1,5 +1,25 @@
+// RECURSION ------------------------- Apr/22/25
+// Q1 Fibonacchi of Number 
+/*
+let n = 4;
+let res = fibRec(n);
+console.log(res);
+
+function fibRec(n) {
+    if(n <= 1){
+        return n;
+    }
+    let last = fibRec(n-1);
+    let slast = fibRec(n-2);
+    return last + slast;
+}
+TC :- O(n)
+SC :- O(n)
+*/
+
+
 // RECURSION ------------------------- Apr/20/25
-// Q1 sum of n number in rec Funvtional recursion 
+// Q1 sum of n number in rec Funntional recursion 
 /*
 let n = 5;
 let res = sumRec(n);
@@ -74,6 +94,7 @@ function isPalindrome(i,str) {
     return isPalindrome(i+1,str)
 }
 */
+// 9pm  apr /20/25
 
 
 // RECURSION ------------------------- Apr/19/25
@@ -161,7 +182,7 @@ function print1ToN(i,n){
 }
 */
 
-// Q6 print from n to 1 nut dont use i -1
+// Q6 print from n to 1 num dont use i -1
 /*
 let n = 5;
 let res = print1ToN(1,n);
